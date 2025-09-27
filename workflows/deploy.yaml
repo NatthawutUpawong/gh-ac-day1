@@ -2,7 +2,7 @@ name: Deploy React
 on: 
   push:
     branches:
-      - home
+      - main
       - features/**
       - "!features/authen"
   workflow_dispatch:
