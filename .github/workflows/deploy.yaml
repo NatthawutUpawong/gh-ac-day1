@@ -2,7 +2,8 @@ name: Deploy React
 on: 
   push:
     branches:
-      - home
+      # - home
+      - main
       - features/**
       - "!features/authen"
   workflow_dispatch:
@@ -14,10 +15,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # - name: Use repo variable
-      #   run: echo "API URL:${{ vars.API_VARIABLE }}"
-      # - name: Use repo secrets
-      #   run: echo "API URL:${{ secrets.API_SECRET }}"
+      - name: Use repo variable
+        run: echo "API URL:${{ vars.API_VARIABLE }}"
+      - name: Use repo secrets
+        run: echo "API URL:${{ secrets.API_SECRET }}"
       - name: Clone repo
         uses: actions/checkout@v5
       - name: Setup Bun
