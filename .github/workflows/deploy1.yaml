@@ -24,7 +24,7 @@ jobs:
       - name: Use repo secrets
         run: echo "API URL:${{ secrets.API_SECRET }}"
       - name: Install and Cacshe
-        uses: .github/actions/install-cache
+        uses: ./.github/actions/install-cache
       - name: Build Project
         run: bun run build
       - name: List files
