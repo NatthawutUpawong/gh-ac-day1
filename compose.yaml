@@ -1,0 +1,9 @@
+services:
+  web:
+    image: chainchinjung/react-demo1
+    container_name: react
+    ports:
+      - 3000:3000
+    labels:
+      # ปักธงไว้ให้ Watchtower รู้จัก
+      - "com.centurylinklabs.watchtower.enable=true"
