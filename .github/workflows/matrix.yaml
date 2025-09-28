@@ -7,8 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        bun-version: ["1.2.0", "1.2.18", "1.2.16"]
+        bun-version: ["1.2.9", "1.2.18", "1.2.16"]
         browser: [ "firefox", "chrome", "safari"]
+        exclude: 
+          - bun-version: "1.2.18"
+            browser: "safari"
+          - include: ""
+          - bun-version: "1.2.20"
+            browser: "safari"
+          - bun-version: "1.2.21"
+            browser: "edge"
     steps:
       - name: Print Bun version
-        run: echo "${{ matrix.bun_version }} - ${{ matrix.browser }}"
+        run: echo "${{ matrix.bun-version }} - ${{ matrix.browser }}"
