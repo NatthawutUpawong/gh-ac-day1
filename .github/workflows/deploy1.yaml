@@ -23,6 +23,8 @@ jobs:
         run: echo "API URL:${{ vars.API_VARIABLE }}"
       - name: Use repo secrets
         run: echo "API URL:${{ secrets.API_SECRET }}"
+      - name: Clone repo
+        uses: actions/checkout@v5        
       - name: Install and Cacshe
         uses: ./.github/actions/install-cache
       - name: Build Project
