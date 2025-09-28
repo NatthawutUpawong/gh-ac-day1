@@ -1,5 +1,10 @@
 name: Install deps and caching
 description: Install deps and caching
+inputs:
+  bun-version:
+    description: bun version
+    required: false
+    default: 1.2.9
 runs:
   using: composite
   steps:
