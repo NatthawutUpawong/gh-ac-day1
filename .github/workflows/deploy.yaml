@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: oven/bun:1
-      # env: 
-        # - NODE
+      env: 
+        NODE_ENV: production
     steps:
       - name: Use repo variable
         run: echo "API URL:${{ vars.API_VARIABLE }}"
