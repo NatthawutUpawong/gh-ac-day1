@@ -26,7 +26,7 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v5        
       - name: Install and Cacshe
-        uses: ./.github/actions/install-cache
+        uses: .github/actions/install-cache
       - name: Build Project
         run: bun run build
       - name: List files
